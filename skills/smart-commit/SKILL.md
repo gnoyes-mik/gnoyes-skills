@@ -1,12 +1,6 @@
 ---
 name: smart-commit
-description: |
-  변경사항을 논리적 단위로 분리하여 커밋합니다. 브랜치 생성도 지원합니다.
-  트리거: "커밋해줘", "변경사항 정리", "커밋 분리", "브랜치 만들고 커밋",
-  "commit", "정리해서 커밋", "논리적으로 커밋", "smart commit"
-disable-model-invocation: false
-allowed-tools: Read, Grep, Bash(git:*), Bash(gh:*)
-argument-hint: "[--push] [--branch 브랜치명]"
+description: 변경사항을 논리적 단위로 분리하여 커밋합니다. 커밋해줘, 변경사항 정리, 커밋 분리, smart commit
 ---
 
 # Smart Commit - 논리적 커밋 분리 도구

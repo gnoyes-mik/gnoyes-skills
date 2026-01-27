@@ -1,12 +1,6 @@
 ---
 name: create-pr
-description: |
-  현재 브랜치의 변경사항을 기반으로 Pull Request를 생성합니다.
-  트리거: "PR 만들어", "풀리퀘 생성", "PR 올려", "create pr", "pull request",
-  "PR 작성", "리뷰 요청", "코드 리뷰 요청"
-disable-model-invocation: false
-allowed-tools: Read, Grep, Bash(git:*), Bash(gh:*)
-argument-hint: "[--draft] [--base develop] [--title 제목]"
+description: 현재 브랜치의 변경사항을 기반으로 Pull Request를 생성합니다. PR 만들어, 풀리퀘 생성, create pr
 ---
 
 # PR Create - Pull Request 생성 도구

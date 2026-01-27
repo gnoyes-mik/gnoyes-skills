@@ -1,12 +1,6 @@
 ---
 name: review-pr
-description: |
-  PR에 달린 리뷰 코멘트를 분석하고 요약합니다. 변경 필요 여부를 판단합니다.
-  트리거: "리뷰 확인", "코멘트 요약", "PR 리뷰 정리", "리뷰 코멘트",
-  "review summary", "피드백 확인", "리뷰어 의견", "PR 피드백"
-disable-model-invocation: false
-allowed-tools: Read, Grep, Bash(git:*), Bash(gh:*)
-argument-hint: "[PR번호]"
+description: PR에 달린 리뷰 코멘트를 분석하고 요약합니다. 리뷰 확인, 코멘트 요약, PR 리뷰 정리
 ---
 
 # PR Review Summary - 리뷰 코멘트 분석 도구
