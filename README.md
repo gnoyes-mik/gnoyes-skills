@@ -7,8 +7,8 @@ gnoyes의 개인용 Git/PR 유틸리티 스킬 플러그인 for Claude Code
 | 스킬 | 명령어 | 설명 |
 |------|--------|------|
 | **Smart Commit** | `/gnoyes:smart-commit` | 변경사항을 논리적 단위로 분리하여 커밋 |
-| **PR Create** | `/gnoyes:pr` | 변경사항 기반으로 Pull Request 생성 |
-| **PR Review** | `/gnoyes:prr` | PR 리뷰 코멘트 분석 및 요약 |
+| **Create PR** | `/gnoyes:create-pr` | 변경사항 기반으로 Pull Request 생성 |
+| **Review PR** | `/gnoyes:review-pr` | PR 리뷰 코멘트 분석 및 요약 |
 
 ## 설치
 
@@ -54,37 +54,37 @@ claude --plugin-dir /path/to/gnoyes-skills
 **자동 트리거 키워드**:
 - "커밋해줘", "변경사항 정리", "커밋 분리", "논리적으로 커밋"
 
-### PR Create (`/gnoyes:pr`)
+### Create PR (`/gnoyes:create-pr`)
 
 현재 브랜치의 변경사항을 기반으로 PR을 생성합니다.
 
 ```bash
 # 기본 사용 (베이스 브랜치 자동 감지)
-/gnoyes:pr
+/gnoyes:create-pr
 
 # 베이스 브랜치 지정
-/gnoyes:pr --base develop
+/gnoyes:create-pr --base develop
 
 # Draft PR로 생성
-/gnoyes:pr --draft
+/gnoyes:create-pr --draft
 
 # 제목 직접 지정
-/gnoyes:pr --title "feat: 새로운 기능 추가"
+/gnoyes:create-pr --title "feat: 새로운 기능 추가"
 ```
 
 **자동 트리거 키워드**:
 - "PR 만들어", "풀리퀘 생성", "PR 올려", "리뷰 요청"
 
-### PR Review (`/gnoyes:prr`)
+### Review PR (`/gnoyes:review-pr`)
 
 PR에 달린 리뷰 코멘트를 분석하고 요약합니다.
 
 ```bash
 # 현재 브랜치의 PR 분석
-/gnoyes:prr
+/gnoyes:review-pr
 
 # 특정 PR 번호 지정
-/gnoyes:prr 123
+/gnoyes:review-pr 123
 ```
 
 **자동 트리거 키워드**:
@@ -92,7 +92,7 @@ PR에 달린 리뷰 코멘트를 분석하고 요약합니다.
 
 ## 코멘트 분류 체계
 
-PR Review 스킬은 리뷰 코멘트를 다음과 같이 분류합니다:
+Review PR 스킬은 리뷰 코멘트를 다음과 같이 분류합니다:
 
 | 카테고리 | 아이콘 | 설명 | 액션 |
 |----------|--------|------|------|
@@ -121,10 +121,10 @@ gnoyes-skills/
 ├── skills/
 │   ├── smart-commit/
 │   │   └── SKILL.md         # Smart Commit 스킬
-│   ├── pr/
-│   │   └── SKILL.md         # PR Create 스킬
-│   └── prr/
-│       └── SKILL.md         # PR Review 스킬
+│   ├── create-pr/
+│   │   └── SKILL.md         # Create PR 스킬
+│   └── review-pr/
+│       └── SKILL.md         # Review PR 스킬
 ├── .gitignore
 ├── LICENSE
 └── README.md

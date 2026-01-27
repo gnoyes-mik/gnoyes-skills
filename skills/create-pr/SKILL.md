@@ -1,5 +1,5 @@
 ---
-name: pr
+name: create-pr
 description: |
   현재 브랜치의 변경사항을 기반으로 Pull Request를 생성합니다.
   트리거: "PR 만들어", "풀리퀘 생성", "PR 올려", "create pr", "pull request",
@@ -170,7 +170,7 @@ PR 본문에 추가 섹션:
 
 ### 입력
 ```
-/gnoyes:pr --base develop
+/gnoyes:create-pr --base develop
 ```
 
 ### 출력 미리보기

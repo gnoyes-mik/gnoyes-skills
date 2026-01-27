@@ -1,5 +1,5 @@
 ---
-name: prr
+name: review-pr
 description: |
   PR에 달린 리뷰 코멘트를 분석하고 요약합니다. 변경 필요 여부를 판단합니다.
   트리거: "리뷰 확인", "코멘트 요약", "PR 리뷰 정리", "리뷰 코멘트",
@@ -249,18 +249,18 @@ gh api repos/{owner}/{repo}/issues/<number>/comments
 
 ### 입력
 ```
-/gnoyes:prr 123
+/gnoyes:review-pr 123
 ```
 
 또는 현재 브랜치에서:
 ```
-/gnoyes:prr
+/gnoyes:review-pr
 ```
 
 ### 자동 트리거 예시
 
 사용자: "리뷰 코멘트 확인해줘"
-→ 자동으로 `/gnoyes:prr` 스킬 실행
+→ 자동으로 `/gnoyes:review-pr` 스킬 실행
 
 ## 안전 규칙
 
@@ -281,4 +281,4 @@ gh auth status
 ## 관련 스킬
 
 - `/gnoyes:smart-commit` - 수정 후 커밋
-- `/gnoyes:pr` - 새 PR 생성
+- `/gnoyes:create-pr` - 새 PR 생성
