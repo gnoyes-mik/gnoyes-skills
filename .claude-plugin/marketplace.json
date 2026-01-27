@@ -1,0 +1,22 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "gnoyes",
+  "description": "gnoyes의 개인용 Git/PR 유틸리티 스킬",
+  "owner": {
+    "name": "gnoyes"
+  },
+  "plugins": [
+    {
+      "name": "gnoyes",
+      "description": "Smart Commit, Create PR, Review PR 스킬 - Git 워크플로우 자동화",
+      "version": "1.0.0",
+      "author": {
+        "name": "gnoyes"
+      },
+      "source": "./",
+      "category": "productivity",
+      "homepage": "https://github.com/gnoyes-mik/gnoyes-skills",
+      "tags": ["git", "commit", "pull-request", "review", "automation"]
+    }
+  ]
+}
