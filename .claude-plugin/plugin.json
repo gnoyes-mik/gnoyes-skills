@@ -1,9 +1,10 @@
 {
   "name": "gnoyes",
-  "description": "gnoyes의 개인용 Git/PR 유틸리티 스킬 - Smart Commit, Create PR, Review PR",
   "version": "1.0.0",
+  "description": "gnoyes의 개인용 Git/PR 유틸리티 스킬 - Smart Commit, Create PR, Review PR",
   "author": {
     "name": "gnoyes"
   },
-  "repository": "https://github.com/gnoyes-mik/gnoyes-skills"
+  "repository": "https://github.com/gnoyes-mik/gnoyes-skills",
+  "skills": "./skills/"
 }
