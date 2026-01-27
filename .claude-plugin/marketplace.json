@@ -9,7 +9,7 @@
     {
       "name": "gnoyes",
       "description": "Smart Commit, Create PR, Review PR 스킬 - Git 워크플로우 자동화",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "author": {
         "name": "gnoyes"
       },

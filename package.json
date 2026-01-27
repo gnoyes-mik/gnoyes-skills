@@ -1,0 +1,12 @@
+{
+  "name": "gnoyes-skills",
+  "version": "1.0.2",
+  "description": "gnoyes의 개인용 Git/PR 유틸리티 스킬",
+  "type": "module",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "skills",
+    ".claude-plugin"
+  ]
+}
