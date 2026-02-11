@@ -8,15 +8,15 @@
   "plugins": [
     {
       "name": "gnoyes",
-      "description": "Smart Commit, Create PR, Review PR 스킬 - Git 워크플로우 자동화",
-      "version": "1.0.4",
+      "description": "Smart Commit, Create PR, Review PR, YT Subtitle 스킬 - Git 워크플로우 & 유틸리티",
+      "version": "1.1.0",
       "author": {
         "name": "gnoyes"
       },
       "source": "./",
       "category": "productivity",
       "homepage": "https://github.com/gnoyes-mik/gnoyes-skills",
-      "tags": ["git", "commit", "pull-request", "review", "automation"]
+      "tags": ["git", "commit", "pull-request", "review", "automation", "youtube", "subtitle"]
     }
   ]
 }

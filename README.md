@@ -1,6 +1,6 @@
 # gnoyes-skills
 
-gnoyes의 개인용 Git/PR 유틸리티 스킬 플러그인 for Claude Code
+gnoyes의 개인용 유틸리티 스킬 플러그인 for Claude Code
 
 ## 스킬 목록
 
@@ -9,6 +9,7 @@ gnoyes의 개인용 Git/PR 유틸리티 스킬 플러그인 for Claude Code
 | **Smart Commit** | `/gnoyes:smart-commit` | 변경사항을 논리적 단위로 분리하여 커밋 |
 | **Create PR** | `/gnoyes:create-pr` | 변경사항 기반으로 Pull Request 생성 |
 | **Review PR** | `/gnoyes:review-pr` | PR 리뷰 코멘트 분석 및 요약 |
+| **YT Subtitle** | `/gnoyes:yt-subtitle` | YouTube 영상 자막 추출 → 마크다운 변환 |
 
 ## 설치
 
@@ -90,6 +91,28 @@ PR에 달린 리뷰 코멘트를 분석하고 요약합니다.
 **자동 트리거 키워드**:
 - "리뷰 확인", "코멘트 요약", "PR 리뷰 정리", "피드백 확인"
 
+### YT Subtitle (`/gnoyes:yt-subtitle`)
+
+YouTube 영상의 자막을 추출하여 YAML frontmatter가 포함된 마크다운 파일로 저장합니다.
+
+```bash
+# 영어 자막 추출
+/gnoyes:yt-subtitle https://www.youtube.com/watch?v=dQw4w9WgXcQ en
+
+# 한국어 자막 추출
+/gnoyes:yt-subtitle https://youtu.be/dQw4w9WgXcQ ko
+
+# 언어 선택 (대화형)
+/gnoyes:yt-subtitle https://www.youtube.com/watch?v=dQw4w9WgXcQ
+```
+
+**자동 트리거 키워드**:
+- "유튜브 자막", "자막 추출", "YouTube 자막", "subtitle extract"
+
+**사전 요구사항**:
+- `yt-dlp` (`brew install yt-dlp`)
+- `ffmpeg` 권장 (`brew install ffmpeg`)
+
 ## 코멘트 분류 체계
 
 Review PR 스킬은 리뷰 코멘트를 다음과 같이 분류합니다:
@@ -123,8 +146,10 @@ gnoyes-skills/
 │   │   └── SKILL.md         # Smart Commit 스킬
 │   ├── create-pr/
 │   │   └── SKILL.md         # Create PR 스킬
-│   └── review-pr/
-│       └── SKILL.md         # Review PR 스킬
+│   ├── review-pr/
+│   │   └── SKILL.md         # Review PR 스킬
+│   └── yt-subtitle/
+│       └── SKILL.md         # YT Subtitle 스킬
 ├── .gitignore
 ├── LICENSE
 └── README.md
