@@ -4,11 +4,18 @@ gnoyes의 개인용 유틸리티 스킬 플러그인 for Claude Code
 
 ## 스킬 목록
 
+### GitHub
+
 | 스킬 | 명령어 | 설명 |
 |------|--------|------|
 | **Smart Commit** | `/gnoyes:smart-commit` | 변경사항을 논리적 단위로 분리하여 커밋 |
 | **Create PR** | `/gnoyes:create-pr` | 변경사항 기반으로 Pull Request 생성 |
 | **Review PR** | `/gnoyes:review-pr` | PR 리뷰 코멘트 분석 및 요약 |
+
+### English
+
+| 스킬 | 명령어 | 설명 |
+|------|--------|------|
 | **YT Subtitle** | `/gnoyes:yt-subtitle` | YouTube 영상 자막 추출 → 마크다운 변환 |
 
 ## 설치
@@ -34,7 +41,9 @@ claude --plugin-dir /path/to/gnoyes-skills
 
 ## 사용법
 
-### Smart Commit (`/gnoyes:smart-commit`)
+### GitHub
+
+#### Smart Commit (`/gnoyes:smart-commit`)
 
 변경사항을 분석하여 논리적 단위로 분리 커밋합니다.
 
@@ -55,7 +64,7 @@ claude --plugin-dir /path/to/gnoyes-skills
 **자동 트리거 키워드**:
 - "커밋해줘", "변경사항 정리", "커밋 분리", "논리적으로 커밋"
 
-### Create PR (`/gnoyes:create-pr`)
+#### Create PR (`/gnoyes:create-pr`)
 
 현재 브랜치의 변경사항을 기반으로 PR을 생성합니다.
 
@@ -76,7 +85,7 @@ claude --plugin-dir /path/to/gnoyes-skills
 **자동 트리거 키워드**:
 - "PR 만들어", "풀리퀘 생성", "PR 올려", "리뷰 요청"
 
-### Review PR (`/gnoyes:review-pr`)
+#### Review PR (`/gnoyes:review-pr`)
 
 PR에 달린 리뷰 코멘트를 분석하고 요약합니다.
 
@@ -91,7 +100,9 @@ PR에 달린 리뷰 코멘트를 분석하고 요약합니다.
 **자동 트리거 키워드**:
 - "리뷰 확인", "코멘트 요약", "PR 리뷰 정리", "피드백 확인"
 
-### YT Subtitle (`/gnoyes:yt-subtitle`)
+### English
+
+#### YT Subtitle (`/gnoyes:yt-subtitle`)
 
 YouTube 영상의 자막을 추출하여 YAML frontmatter가 포함된 마크다운 파일로 저장합니다.
 
