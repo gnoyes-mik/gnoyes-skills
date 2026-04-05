@@ -12,6 +12,12 @@ gnoyes의 개인용 유틸리티 스킬 플러그인 for Claude Code
 | **Create PR** | `/gnoyes:create-pr` | 변경사항 기반으로 Pull Request 생성 |
 | **Review PR** | `/gnoyes:review-pr` | PR 리뷰 코멘트 분석 및 요약 |
 
+### LinkedIn
+
+| 스킬 | 명령어 | 설명 |
+|------|--------|------|
+| **LinkedIn Knowledge Organizer** | `/gnoyes:linkedin-knowledge-organizer` | LinkedIn 활동(퍼온글/좋아요/코멘트/원글)을 Obsidian 지식 저장소에 중복 없이 카테고리화하여 정리 |
+
 ### English
 
 | 스킬 | 명령어 | 설명 |
@@ -111,6 +117,38 @@ PR에 달린 리뷰 코멘트를 분석하고 요약합니다.
 | NITPICK | 📝 | 사소한 스타일 이슈 | 선택 |
 | PRAISE | 👍 | 칭찬/긍정적 피드백 | - |
 
+### LinkedIn
+
+#### LinkedIn Knowledge Organizer (`/gnoyes:linkedin-knowledge-organizer`)
+
+LinkedIn activity(본인 또는 타인 프로필)의 원글·Repost·좋아요·코멘트를 수집하여 Obsidian 지식 저장소에 중복 없이 카테고리화하여 저장합니다. 본문과 포함 링크의 내용을 함께 분석하며, Obsidian `[[위키링크]]`로 노트를 연결합니다.
+
+```bash
+# 본인 프로필 (기본)
+/gnoyes:linkedin-knowledge-organizer
+
+# 타인 프로필 지정
+/gnoyes:linkedin-knowledge-organizer https://www.linkedin.com/in/someone/
+```
+
+**자동 트리거 키워드**:
+- "링크드인 지식정리", "퍼온글 정리", "LinkedIn organize", "Obsidian knowledge base"
+
+**사전 요구사항**:
+- Chrome 브라우저에서 LinkedIn 로그인 상태
+- `claude-in-chrome` MCP 설치 및 연결
+- `~/.claude/settings.json`에 vault 경로 설정:
+  ```json
+  {
+    "gnoyes": {
+      "linkedin_organizer": {
+        "vault_path": "/absolute/path/to/obsidian-vault",
+        "subfolder": "Sources/LinkedIn"
+      }
+    }
+  }
+  ```
+
 ### English
 
 #### YT Subtitle (`/gnoyes:yt-subtitle`)
@@ -157,6 +195,8 @@ gnoyes-skills/
 │   │   └── SKILL.md         # Create PR 스킬
 │   ├── review-pr/
 │   │   └── SKILL.md         # Review PR 스킬
+│   ├── linkedin-knowledge-organizer/
+│   │   └── SKILL.md         # LinkedIn Knowledge Organizer 스킬
 │   └── yt-subtitle/
 │       └── SKILL.md         # YT Subtitle 스킬
 ├── .gitignore
