@@ -16,6 +16,7 @@ gnoyes의 개인용 유틸리티 스킬 플러그인 for Claude Code
 
 | 스킬 | 명령어 | 설명 |
 |------|--------|------|
+| **LinkedIn Analyzer** | `/gnoyes:linkedin-analyzer` | LinkedIn 프로필 분석 및 최적화 추천 |
 | **LinkedIn Knowledge Organizer** | `/gnoyes:linkedin-knowledge-organizer` | LinkedIn 활동(퍼온글/좋아요/코멘트/원글)을 Obsidian 지식 저장소에 중복 없이 카테고리화하여 정리 |
 
 ### English
@@ -26,20 +27,33 @@ gnoyes의 개인용 유틸리티 스킬 플러그인 for Claude Code
 
 ## 설치
 
-### 전역 설치 (모든 프로젝트에서 사용)
+### Step 1. 마켓플레이스 등록 (최초 1회)
 
 ```bash
-claude plugin install /path/to/gnoyes-skills --scope user
+claude plugin marketplace add github:gnoyes-mik/gnoyes-skills
 ```
 
-### 프로젝트별 설치
+### Step 2. 플러그인 설치
 
 ```bash
-cd your-project
-claude plugin install /path/to/gnoyes-skills --scope project
+# 전역 설치 (모든 프로젝트에서 사용)
+claude plugin install gnoyes --scope user
+
+# 또는 프로젝트별 설치
+claude plugin install gnoyes --scope project
+```
+
+### 업데이트
+
+새로운 스킬이 추가되면 아래 명령으로 업데이트합니다.
+
+```bash
+claude plugin update gnoyes
 ```
 
 ### 개발/테스트 모드
+
+로컬 소스를 직접 참조하여 테스트할 수 있습니다.
 
 ```bash
 claude --plugin-dir /path/to/gnoyes-skills
