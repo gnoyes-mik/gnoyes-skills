@@ -30,7 +30,7 @@ gnoyes의 개인용 유틸리티 스킬 플러그인 for Claude Code
 ### Step 1. 마켓플레이스 등록 (최초 1회)
 
 ```bash
-claude plugin marketplace add github:gnoyes-mik/gnoyes-skills
+claude plugin marketplace add gnoyes-mik/gnoyes-skills
 ```
 
 ### Step 2. 플러그인 설치
@@ -48,7 +48,7 @@ claude plugin install gnoyes --scope project
 새로운 스킬이 추가되면 아래 명령으로 업데이트합니다.
 
 ```bash
-claude plugin update gnoyes
+claude plugin update gnoyes@gnoyes
 ```
 
 ### 개발/테스트 모드
