@@ -7,5 +7,5 @@
 export const pluginInfo = {
   name: 'gnoyes',
   version: '1.1.0',
-  description: 'Git/PR 유틸리티 스킬 - Smart Commit, Create PR, Review PR, YT Subtitle, LinkedIn Analyzer'
+  description: 'Git/PR 유틸리티 스킬 - Smart Commit, Create PR, Review PR, Checkout, YT Subtitle, LinkedIn Analyzer'
 };
